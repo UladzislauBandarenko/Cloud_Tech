@@ -148,11 +148,11 @@ async def metrics():
 async def startup():
     # just test redis connection
     await redis_client.ping()
+    asyncio.create_task(consume())
 
 @app.on_event("shutdown")
 async def shutdown():
     await redis_client.close()
     executor.shutdown(wait=True)
 
-   
-    
+
