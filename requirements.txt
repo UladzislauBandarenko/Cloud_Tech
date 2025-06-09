@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+asyncpg
+databases
+pydantic
+python-dotenv
+aioredis
+cryptography
+azure-servicebus
+prometheus-fastapi-instrumentator
+pytest
