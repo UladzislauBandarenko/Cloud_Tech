@@ -41,7 +41,7 @@ jobs:
           LOAN_QUEUE : ${{ secrets.LOAN_QUEUE }}
           ENCRYPTION_KEY : ${{ secrets.ENCRYPTION_KEY }}
     
-        working-directory: user-service
+        working-directory: Books
         run: |
           pytest
 
