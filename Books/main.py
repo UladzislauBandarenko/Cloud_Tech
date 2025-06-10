@@ -81,7 +81,7 @@ def mark_book(book_id: int, freed: bool):
     try:
         with get_pg_connection() as conn:
             with conn.cursor() as cur:
-                cur.execute(update_query, (book_id, freed))
+                cur.execute(update_query, (freed, book_id))
                 conn.commit()
                 print(f"[✓] Marked book id={book_id} as unavailable")
     except Exception as e:
